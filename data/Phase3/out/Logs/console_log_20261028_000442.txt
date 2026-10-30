@@ -1,0 +1,46 @@
+[BOXES] box 1: shelf 4 level 1 centre=[13.22 46.06 0.53] lift=0.00 m
+[BOXES] box 2: shelf 3 level 2 centre=[1.73 43.32 1.43] lift=0.90 m
+[BOXES] box 3: shelf 2 level 3 centre=[-9.78 43.32 2.33] lift=1.80 m
+[STATIONS] Packing Station 1 (table 1): approach from the south side, slot 1 at [18.50 65.97]
+[STATIONS] Packing Station 2 (table 2): approach from the south side, slot 1 at [0.50 65.97]
+[STATIONS] Packing Station 3 (table 3): approach from the south side, slot 1 at [-17.50 65.97]
+[STATIONS] Packing Station 1: 9 places along the table
+[STATIONS] Packing Station 2: 9 places along the table
+[STATIONS] Packing Station 3: 9 places along the table
+[P3CONFIG] 554 slots (540 store, 14 dock), 0 static-stock slots, 54 cartons (30 stored, 10 at dock, 14 reserve)
+[Phase3] Created C:\WarehouseRobotics\src\Phase3\WarehouseFleetSim.slx with 6 robots, 54 cartons
+
+[P3] 6 robot(s): blue, red, green, black, pink, yellow.  Simulation starting - wait for the 3-D window.
+
+[P3] CHOOSE THE MODE (type in this window):
+       p3 mode auto       the system works by itself (emergency job:  p3 urgent <slot> [station n])
+       p3 mode manual     you give the jobs, they run at once in parallel   (p3 wms = where is which box)
+       p3 mode batch      test single robots: jobs per robot, start with  p3 go
+       p3 help            short command table
+       outputs: C:\WarehouseRobotics\data\Phase3\out
+
+p3 mode manual
+[P3] AUTO mode off
+[P3] MODE MANUAL: you give every job, it starts at once, several jobs run in parallel in this one window.
+     p3 wms                              all boxes and where they are
+     p3 move 8B-L3-P06 station 1         box (slot or C<id>) -> packing station, any free robot
+     p3 move D03 1A-L1-P02               box on a stand -> shelf slot
+     p3 red retrieve 3A-L2-P04 station 1 the same for one named robot
+p3 add 4A-L1-P02
+[P3] C41 is now in 4A-L1-P02
+p3 add 4A-L2-P03
+[P3] C42 is now in 4A-L2-P03
+p3 add 4A-L3-P05
+[P3] C43 is now in 4A-L3-P05
+p3 blue retrieve 4A-L1-P01 station 3
+[P3] blue: retrieve C27 from 4A-L1-P01
+p3 red retrieve 4A-L1-P06 station 3
+[P3] red: retrieve C16 from 4A-L1-P06
+p3 green retrieve 4A-L3-P07 station 3
+[P3] green: retrieve C4 from 4A-L3-P07
+p3 yellow retrieve 4A-L1-P02 station 3
+[P3] yellow: retrieve C41 from 4A-L1-P02
+p3 pink retrieve 4A-L2-P03 station 3
+[P3] pink: retrieve C42 from 4A-L2-P03
+p3 black retrieve 4A-L3-P05 station 3
+[P3] black: retrieve C43 from 4A-L3-P05

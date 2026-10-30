@@ -1,0 +1,370 @@
+SAMPLE TASKS FOR PHASE 3
+========================
+Copy one line at a time into the MATLAB Command Window.
+Start first:   cd C:\WarehouseRobotics\src\Phase3 ; addpath(pwd) ; phase3
+Use ONE set per run. There are 10 manual sets (M1 to M10) and 10 batch sets (B1 to B10). Wait for the 3-D window and the 2-D map before you type.
+
+Notes
+ - Commands with "order any" take any box that is stored on a shelf, so they work in every layout.
+ - D01, D02, ... are the staging stands. A "move" command takes the box from that stand
+   and puts it into the named shelf slot. Type  p3 wms  to see boxes, stands and free slots.
+ - If a slot is already occupied, choose another slot name (shelves 4 to 7 have P01 to P08).
+ - Robot names: red, blue, green, black, pink, yellow.
+
+
+########################################################
+MANUAL MODE
+########################################################
+
+------------------------------------------------------
+SET M1  (6 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 order any station 1
+p3 order any station 2
+p3 order any station 3
+p3 move D01 5A-L1-P02 robot red
+p3 move D02 6B-L2-P03 robot blue
+p3 red retrieve 4A-L1-P01 station 3
+(finish with  p3 end )
+
+------------------------------------------------------
+SET M2  (10 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 order any station 1
+p3 order any station 1
+p3 order any station 2
+p3 order any station 2
+p3 order any station 3
+p3 move D01 4B-L1-P05 robot red
+p3 move D02 5A-L2-P04 robot blue
+p3 move D03 6B-L1-P03 robot green
+p3 move D04 7A-L3-P06 robot black
+p3 move D05 4A-L3-P07 robot pink
+(finish with  p3 end )
+
+------------------------------------------------------
+SET M3  (4 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 order any station 1
+p3 order any station 3
+p3 order any station 3
+p3 move D01 6A-L3-P05 robot red
+(finish with  p3 end )
+
+------------------------------------------------------
+SET M4  (5 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 red retrieve 4A-L1-P01 station 2
+p3 move D02 4A-L2-P06 robot blue
+p3 move D01 4B-L3-P06 robot red
+p3 order any station 1
+p3 order any station 2
+(finish with  p3 end )
+
+------------------------------------------------------
+SET M5  (7 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 order any station 1
+p3 red retrieve 4A-L1-P01 station 2
+p3 move D02 6A-L3-P03 robot blue
+p3 order any station 1
+p3 move D03 4A-L3-P05 robot green
+p3 order any station 2
+p3 move D01 5B-L2-P05 robot red
+(finish with  p3 end )
+
+------------------------------------------------------
+SET M6  (8 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 move D03 7A-L1-P06 robot green
+p3 red retrieve 4A-L1-P01 station 3
+p3 move D01 6A-L1-P05 robot red
+p3 move D04 6B-L2-P07 robot black
+p3 move D02 7B-L1-P02 robot blue
+p3 order any station 1
+p3 order any station 3
+p3 order any station 2
+(finish with  p3 end )
+
+------------------------------------------------------
+SET M7  (9 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 move D03 7A-L3-P07 robot green
+p3 order any station 3
+p3 move D01 7B-L3-P08 robot red
+p3 order any station 3
+p3 order any station 1
+p3 order any station 1
+p3 order any station 3
+p3 order any station 3
+p3 move D02 5A-L2-P07 robot blue
+(finish with  p3 end )
+
+------------------------------------------------------
+SET M8  (12 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 order any station 1
+p3 order any station 3
+p3 red retrieve 4A-L1-P01 station 2
+p3 order any station 3
+p3 order any station 3
+p3 move D05 5A-L3-P02 robot pink
+p3 order any station 2
+p3 move D02 5B-L2-P04 robot blue
+p3 order any station 2
+p3 move D01 5A-L2-P02 robot red
+p3 move D04 5B-L1-P07 robot black
+p3 move D03 5A-L3-P07 robot green
+(finish with  p3 end )
+
+------------------------------------------------------
+SET M9  (8 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 order any station 3
+p3 order any station 3
+p3 order any station 2
+p3 move D02 6B-L3-P05 robot blue
+p3 order any station 3
+p3 move D01 7B-L2-P02 robot red
+p3 order any station 2
+p3 order any station 1
+(finish with  p3 end )
+
+------------------------------------------------------
+SET M10  (11 tasks, manual)
+------------------------------------------------------
+p3 mode manual
+p3 red retrieve 4A-L1-P01 station 2
+p3 move D02 4A-L3-P07 robot blue
+p3 move D04 4B-L1-P07 robot black
+p3 move D03 7A-L1-P08 robot green
+p3 order any station 2
+p3 order any station 1
+p3 move D01 6A-L2-P04 robot red
+p3 move D05 5B-L2-P06 robot pink
+p3 order any station 2
+p3 order any station 1
+p3 move D06 5B-L3-P05 robot yellow
+(finish with  p3 end )
+
+
+########################################################
+BATCH MODE  (queue everything first, nothing moves until p3 go)
+########################################################
+
+------------------------------------------------------
+SET B1  (6 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 4B-L1-P05 robot red
+p3 move D02 5A-L2-P04 robot blue
+p3 move D03 6B-L1-P03 robot green
+p3 move D04 7A-L3-P06 robot black
+p3 order any station 1
+p3 order any station 2
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+SET B2  (18 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 4A-L1-P02 robot red
+p3 move D02 4B-L2-P03 robot blue
+p3 move D03 5A-L3-P04 robot green
+p3 move D04 5B-L1-P05 robot black
+p3 move D05 6A-L2-P06 robot pink
+p3 move D06 6B-L3-P07 robot yellow
+p3 move D07 7A-L1-P08 robot red
+p3 move D08 7B-L2-P02 robot blue
+p3 order any station 1
+p3 order any station 1
+p3 order any station 1
+p3 order any station 1
+p3 order any station 2
+p3 order any station 2
+p3 order any station 2
+p3 order any station 3
+p3 order any station 3
+p3 order any station 3
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+SET B3  (8 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 6A-L1-P04 robot red
+p3 move D02 4B-L1-P08 robot blue
+p3 move D03 5B-L3-P02 robot green
+p3 order any station 1
+p3 order any station 3
+p3 order any station 3
+p3 order any station 1
+p3 order any station 3
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+SET B4  (10 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 5A-L2-P03 robot red
+p3 move D02 5A-L2-P08 robot blue
+p3 move D03 4B-L3-P08 robot green
+p3 move D04 7B-L2-P03 robot black
+p3 order any station 1
+p3 order any station 1
+p3 order any station 2
+p3 order any station 1
+p3 order any station 1
+p3 order any station 1
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+SET B5  (12 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 6B-L3-P03 robot red
+p3 move D02 7B-L2-P08 robot blue
+p3 move D03 7B-L2-P03 robot green
+p3 move D04 7A-L1-P02 robot black
+p3 move D05 4A-L2-P07 robot pink
+p3 move D06 7B-L3-P07 robot yellow
+p3 order any station 2
+p3 order any station 1
+p3 order any station 3
+p3 order any station 3
+p3 order any station 3
+p3 order any station 3
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+SET B6  (14 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 7B-L3-P05 robot red
+p3 move D02 7B-L3-P07 robot blue
+p3 move D03 7A-L2-P04 robot green
+p3 move D04 5B-L1-P03 robot black
+p3 move D05 6A-L3-P07 robot pink
+p3 order any station 3
+p3 order any station 3
+p3 order any station 2
+p3 order any station 2
+p3 order any station 2
+p3 order any station 3
+p3 order any station 1
+p3 order any station 3
+p3 order any station 2
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+SET B7  (15 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 7A-L3-P07 robot red
+p3 move D02 5B-L3-P05 robot blue
+p3 move D03 6B-L2-P04 robot green
+p3 move D04 6B-L3-P03 robot black
+p3 move D05 5B-L2-P05 robot pink
+p3 move D06 7B-L2-P05 robot yellow
+p3 move D07 6A-L1-P05 robot red
+p3 move D08 4B-L1-P02 robot blue
+p3 order any station 3
+p3 order any station 3
+p3 order any station 3
+p3 order any station 1
+p3 order any station 3
+p3 order any station 1
+p3 order any station 1
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+SET B8  (16 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 6B-L1-P07 robot red
+p3 move D02 7B-L3-P05 robot blue
+p3 move D03 6B-L1-P05 robot green
+p3 move D04 7B-L1-P05 robot black
+p3 move D05 7A-L3-P07 robot pink
+p3 move D06 6A-L2-P05 robot yellow
+p3 order any station 3
+p3 order any station 1
+p3 order any station 1
+p3 order any station 1
+p3 order any station 3
+p3 order any station 1
+p3 order any station 1
+p3 order any station 1
+p3 order any station 1
+p3 order any station 2
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+SET B9  (17 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 5A-L2-P08 robot red
+p3 move D02 4B-L3-P04 robot blue
+p3 move D03 5B-L1-P08 robot green
+p3 move D04 7B-L3-P03 robot black
+p3 move D05 4A-L3-P06 robot pink
+p3 move D06 6B-L1-P07 robot yellow
+p3 move D07 5B-L1-P05 robot red
+p3 order any station 3
+p3 order any station 2
+p3 order any station 3
+p3 order any station 3
+p3 order any station 2
+p3 order any station 2
+p3 order any station 2
+p3 order any station 2
+p3 order any station 2
+p3 order any station 1
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+SET B10  (9 tasks, batch)
+------------------------------------------------------
+p3 mode batch
+p3 move D01 6B-L3-P02 robot red
+p3 move D02 4A-L3-P02 robot blue
+p3 order any station 2
+p3 order any station 1
+p3 order any station 2
+p3 order any station 3
+p3 order any station 2
+p3 order any station 1
+p3 order any station 1
+p3 queue
+p3 go
+(finish with  p3 end )
+
+------------------------------------------------------
+Useful at any time:  p3 help | p3 wms | p3 queue | p3 end | p3 stop

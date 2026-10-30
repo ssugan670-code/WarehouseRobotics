@@ -1,0 +1,24 @@
+sensorTag | Sensor name: | Sim3dSensor
+sensorId | Sensor identifier: | 21
+sensorName | Sensor name: | Sim3dSensor21
+vehTagList | Parent names: | {'<empty>';'Ro1Kinova';'Ro2Kinova';'Ro3Kinova';'Ro4Kinova';'Ro5Kinova';'Ro6Kinova';'Scene Origin';'WarehouseRoot'}
+vehTag | Parent name: | Ro1Kinova
+mountLoc | Mounting location: | Origin
+offsetFlag | Specify offset | on
+tmountOffset | Relative translation [X, Y, Z] (m): | [-0.28 0 0.55]
+rmountOffset | Relative rotation [Roll, Pitch, Yaw] (deg): | [0 0 0]
+DetectionRange | Detection range (m): | 12
+RangeResolution | Range resolution (m): | 0.002
+VerticalFOV | Vertical field of view (deg): | 2
+VerticalResolution | Vertical resolution (deg): | 2
+HorizontalFOV | Horizontal field of view (deg): | 360
+HorizontalResolution | Horizontal resolution (deg): | 2
+DistanceOutportEnabled | Distance outport | off
+ReflectivityOutportEnabled | Reflectivity outport | off
+SemanticOutportEnabled | Output semantic segmentation | off
+TransformOutportEnabled | Output location (m) and orientation (rad) | off
+SampleTime | Sample time: | 0.1
+mountPoint | Mount point: | [-0.28 0 0.55]
+mountOrientation | Mount orientation: | [0 0 0]
+aMode |  | 3
+ID |  | 21

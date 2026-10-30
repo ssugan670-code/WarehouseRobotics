@@ -1,0 +1,52 @@
+[BOXES] box 1: shelf 4 level 1 centre=[13.22 46.06 0.53] lift=0.00 m
+[BOXES] box 2: shelf 3 level 2 centre=[1.73 43.32 1.43] lift=0.90 m
+[BOXES] box 3: shelf 2 level 3 centre=[-9.78 43.32 2.33] lift=1.80 m
+[STATIONS] Packing Station 1 (table 1): approach from the south side, slot 1 at [18.50 65.97]
+[STATIONS] Packing Station 2 (table 2): approach from the south side, slot 1 at [0.50 65.97]
+[STATIONS] Packing Station 3 (table 3): approach from the south side, slot 1 at [-17.50 65.97]
+[STATIONS] Packing Station 1: 9 places along the table
+[STATIONS] Packing Station 2: 9 places along the table
+[STATIONS] Packing Station 3: 9 places along the table
+[P3CONFIG] 554 slots (540 store, 14 dock), 0 static-stock slots, 54 cartons (30 stored, 10 at dock, 14 reserve)
+[Phase3] Created C:\WarehouseRobotics\src\Phase2\WarehousePhase2Sim.slx with 1 robots, 54 cartons
+
+[P3] 1 robot(s): blue.  Simulation starting - wait for the 3-D window.
+
+[P3] CHOOSE THE MODE (type in this window):
+       p3 mode auto       the system works by itself (emergency job:  p3 urgent <slot> [station n])
+       p3 mode manual     you give the jobs, they run at once in parallel   (p3 wms = where is which box)
+       p3 mode batch      test single robots: jobs per robot, start with  p3 go
+       p3 help            short command table
+       outputs: C:\WarehouseRobotics\data\Phase2\out
+
+p3 mode manual
+[P3] AUTO mode off
+[P3] MODE MANUAL: you give every job, it starts at once, several jobs run in parallel in this one window.
+     p3 wms                              all boxes and where they are
+     p3 move 8B-L3-P06 station 1         box (slot or C<id>) -> packing station, any free robot
+     p3 move D03 1A-L1-P02               box on a stand -> shelf slot
+     p3 red retrieve 3A-L2-P04 station 1 the same for one named robot
+p3 blue retrieve 3A-L1-P08 station 1
+[P3] blue: retrieve C21 from 3A-L1-P08
+p3 blue retrieve 1B-L2-P03 station 2
+[P3] blue: retrieve C13 from 1B-L2-P03
+p3 blue retrieve 2A-L3-P08 station 3
+[P3] blue: retrieve C23 from 2A-L3-P08
+p3 blue putaway C31 5A-L1-P01
+[P3] blue: put away C31 into 5A-L1-P01
+p3 move D02 5B-L1-P01
+[P3] putaway of C32 queued (5B-L1-P01)
+p3 status
+---- t=21 s ---- orders waiting 0, tasks queued 5, shipped 0
+  blue   IDLE      (-20.0,  7.3)  -
+  cartons: yard 14 | dock 10 | shelf 30 | moving 0 | station 0 | lost 0
+p3 metrics
+[P3] metrics written:
+     C:\WarehouseRobotics\data\Phase2\out\Metrics\Metrics_20261027_023805.csv
+     C:\WarehouseRobotics\data\Phase2\out\Tasks\Tasks_20261027_023805.csv
+     C:\WarehouseRobotics\data\Phase2\out\Events\Events_20261027_023805.csv
+     C:\WarehouseRobotics\data\Phase2\out\Summary\Summary_20261027_023805.txt
+[P3] metrics written to C:\WarehouseRobotics\data\Phase2\out
+p3 end
+[P3] GO: 0 queued task(s) released
+[P3] END: queued tasks are finished, then all robots go home and park

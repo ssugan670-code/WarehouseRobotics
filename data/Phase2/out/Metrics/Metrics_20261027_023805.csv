@@ -1,0 +1,2 @@
+robot,tasks_done,distance_m,busy_s,idle_s,wait_s,utilisation_pct,mean_assign_wait_s,energy_Wh,energy_drive_Wh,energy_lift_Wh,energy_arm_Wh,energy_base_Wh
+blue,5,342.6,533.2,111.9,0.0,94.8,215.8,9.865,1.708,0.150,2.632,5.376

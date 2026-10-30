@@ -1,0 +1,58 @@
+[BOXES] box 1: shelf 4 level 1 centre=[13.22 46.06 0.53] lift=0.00 m
+[BOXES] box 2: shelf 3 level 2 centre=[1.73 43.32 1.43] lift=0.90 m
+[BOXES] box 3: shelf 2 level 3 centre=[-9.78 43.32 2.33] lift=1.80 m
+[STATIONS] Packing Station 1 (table 1): approach from the south side, slot 1 at [18.50 65.97]
+[STATIONS] Packing Station 2 (table 2): approach from the south side, slot 1 at [0.50 65.97]
+[STATIONS] Packing Station 3 (table 3): approach from the south side, slot 1 at [-17.50 65.97]
+[STATIONS] Packing Station 1: 9 places along the table
+[STATIONS] Packing Station 2: 9 places along the table
+[STATIONS] Packing Station 3: 9 places along the table
+[P3CONFIG] 554 slots (540 store, 14 dock), 0 static-stock slots, 54 cartons (30 stored, 10 at dock, 14 reserve)
+[Phase3] Created C:\WarehouseRobotics\src\Phase3\WarehouseFleetSim.slx with 6 robots, 54 cartons
+
+[P3] 6 robot(s): blue, red, green, black, pink, yellow.  Simulation starting - wait for the 3-D window.
+
+[P3] CHOOSE THE MODE (type in this window):
+       p3 mode auto       the system works by itself (emergency job:  p3 urgent <slot> [station n])
+       p3 mode manual     you give the jobs, they run at once in parallel   (p3 wms = where is which box)
+       p3 mode batch      test single robots: jobs per robot, start with  p3 go
+       p3 help            short command table
+       outputs: C:\WarehouseRobotics\data\Phase3\out
+
+p3 mode auto
+[P3] AUTO mode on: putaway and retrieve 50:50, a retrieve order about every 20 s, new delivery of boxes only when every staging stand is empty
+[P3] MODE AUTO: the system works by itself (puts boxes away, creates orders and deliveries).
+     Emergency job while it runs:  p3 urgent 8B-L3-P06 [station n]  (nearest free robot takes it, else the first that finishes)
+p3 urgent 8B-L2-P05 station 1
+[P3] URGENT task 15: C11 from 8B-L2-P05 -> Packing Station 1.  Taken by the first robot that finishes its task (all robots are busy)
+p3 status
+---- t=102 s ---- orders waiting 0, tasks queued 9, shipped 0
+  blue   STOW      (-12.5, 18.7)  -
+  red    STOW      ( -1.0, 17.2)  -
+  green  NAV-DEST  (-18.7, 42.4)  t5 retrieve C13 1B-L2-P03 -> Packing Station 3
+  black  RETRACT   (-25.2, 42.3)  t1 retrieve C19 1A-L2-P11 -> Packing Station 2
+  pink   GRASP     ( -1.0, 46.0)  t9 retrieve C21 3A-L1-P08 -> Packing Station 1
+  yellow GRASP     ( -8.5,  5.0)  t3 putaway C32 D02 -> 5B-L1-P01
+  cartons: yard 14 | dock 8 | shelf 30 | moving 2 | station 0 | lost 0
+p3 stop
+[P3] stopping the simulation
+[P3] metrics written:
+     C:\WarehouseRobotics\data\Phase3\out\Metrics\Metrics_20261027_034054.csv
+     C:\WarehouseRobotics\data\Phase3\out\Tasks\Tasks_20261027_034054.csv
+     C:\WarehouseRobotics\data\Phase3\out\Events\Events_20261027_034054.csv
+     C:\WarehouseRobotics\data\Phase3\out\Summary\Summary_20261027_034054.txt
+Phase 3 run summary (20261027_034054)
+robots 6, simulated time 648 s
+tasks done 19 (putaway 10, retrieve 9, cross-dock 0), failed 0
+throughput 1.76 tasks/min, shipped cartons 0
+mean task cycle (created->done) 223.7 s, mean queue wait 99.6 s
+EFFICIENCY: throughput 105.6 tasks/h (17.60 per robot and hour), mean robot utilisation 68 % (min 54 %, max 90 %), time held back by other robots 2.1 % of the working time, distance 1523 m (80.1 m per task)
+ENERGY (simulated motion + datasheet: 36 W arm, 8.2 kg arm, 4 kg carton; assumed: 35 kg base, 30 W base electronics): total 50.3 Wh = driving 7.9 + lifting 0.30 + arm 9.7 + base 32.4 Wh;  2.65 Wh per task, 0.033 Wh per metre driven
+            putaway: 10 done, mean service time (assigned->done) 126.8 s, mean queue wait 134.4 s
+            retrieve: 9 done, mean service time (assigned->done) 121.2 s, mean queue wait 60.9 s
+            faults handled 1 (tasks affected), watchdog interventions 0, tasks given up 0
+            SUITABILITY: utilisation 68 % is in the 55-90 % band - the fleet size fits this workload.
+min robot-robot distance (centres minus carried-box / arm reach) 1.23 m, near misses (<1.17 m) 0, collisions (<0.90 m = chassis circles / boxes / arms touch) 0, wait cycles 0, replans 10
+zone queue: robots waited for a free shelf face / station place 303 s in total (12.8 % of the working time) - they stood still at a safe distance, empty-handed, and went as soon as a place was free; 4 waiting points used
+camera verification: pass 15, fail 0, unavailable 0
+multi-robot planning (M*): 137 searches, 15 coupled, 3 solved by the timed level (waiting in the plan), 0 without result, 5 pull-overs (face to face), collisions 0, near misses 0

@@ -1,0 +1,6 @@
+robots,tasks_done,throughput_per_h,mean_queue_wait_s,mean_service_s,mean_utilisation_pct,held_back_pct,distance_per_task_m,collisions
+1,4,36.0,127.1,78.5,88,0.0,32.8,0
+2,7,63.0,114.4,87.7,88,0.0,49.3,0
+3,9,81.0,91.0,91.1,87,0.0,62.5,0
+4,11,99.0,81.3,101.7,84,0.0,76.8,0
+6,13,117.0,58.2,95.2,62,1.1,85.5,0

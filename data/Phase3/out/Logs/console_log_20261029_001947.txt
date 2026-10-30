@@ -1,0 +1,40 @@
+[BOXES] box 1: shelf 4 level 1 centre=[13.22 46.06 0.53] lift=0.00 m
+[BOXES] box 2: shelf 3 level 2 centre=[1.73 43.32 1.43] lift=0.90 m
+[BOXES] box 3: shelf 2 level 3 centre=[-9.78 43.32 2.33] lift=1.80 m
+[STATIONS] Packing Station 1 (table 1): approach from the south side, slot 1 at [18.50 65.97]
+[STATIONS] Packing Station 2 (table 2): approach from the south side, slot 1 at [0.50 65.97]
+[STATIONS] Packing Station 3 (table 3): approach from the south side, slot 1 at [-17.50 65.97]
+[STATIONS] Packing Station 1: 9 places along the table
+[STATIONS] Packing Station 2: 9 places along the table
+[STATIONS] Packing Station 3: 9 places along the table
+[P3CONFIG] 554 slots (540 store, 14 dock), 0 static-stock slots, 54 cartons (30 stored, 10 at dock, 14 reserve)
+[Phase3] Created D:\WarehouseRobotics\src\Phase3\WarehouseFleetSim.slx with 6 robots, 54 cartons
+
+[P3] 6 robot(s): blue, red, green, black, pink, yellow.  Simulation starting - wait for the 3-D window.
+
+[P3] CHOOSE THE MODE (type in this window):
+       p3 mode auto       the system works by itself (emergency job:  p3 urgent <slot> [station n])
+       p3 mode manual     you give the jobs, they run at once in parallel   (p3 wms = where is which box)
+       p3 mode batch      test single robots: jobs per robot, start with  p3 go
+       p3 help            short command table
+       outputs: C:\WarehouseRobotics\data\Phase3\out
+
+p3 stop
+[P3] stopping the simulation
+[P3] metrics written:
+     C:\WarehouseRobotics\data\Phase3\out\Metrics\Metrics_20261029_001951.csv
+     C:\WarehouseRobotics\data\Phase3\out\Tasks\Tasks_20261029_001951.csv
+     C:\WarehouseRobotics\data\Phase3\out\Events\Events_20261029_001951.csv
+     C:\WarehouseRobotics\data\Phase3\out\Summary\Summary_20261029_001951.txt
+Phase 3 run summary (20261029_001951)
+robots 6, simulated time 1 s
+tasks done 0 (putaway 0, retrieve 0, cross-dock 0), failed 0
+throughput 0.00 tasks/min, shipped cartons 0
+EFFICIENCY: throughput 0.0 tasks/h (0.00 per robot and hour), mean robot utilisation 0 % (min 0 %, max 0 %), time held back by other robots 0.0 % of the working time, distance 0 m (0.1 m per task)
+ENERGY (simulated motion + datasheet: 36 W arm, 8.2 kg arm, 4 kg carton; assumed: 35 kg base, 30 W base electronics): total 0.1 Wh = driving 0.0 + lifting 0.00 + arm 0.0 + base 0.1 Wh;  0.07 Wh per task, 0.071 Wh per metre driven
+            faults handled 0 (tasks affected), watchdog interventions 0, tasks given up 0
+            SUITABILITY: the robots are only 0 % busy on average - for this workload fewer robots would do the job (less congestion, same throughput).
+min robot-robot distance (centres minus carried-box / arm reach) 3.70 m, near misses (<1.17 m) 0, collisions (<0.90 m = chassis circles / boxes / arms touch) 0, wait cycles 0, replans 0
+zone queue: robots waited for a free shelf face / station place 0 s in total (0.0 % of the working time) - they stood still at a safe distance, empty-handed, and went as soon as a place was free; 0 waiting points used
+camera verification: pass 0, fail 0, unavailable 0
+multi-robot planning (M*): 0 searches, 0 coupled, 0 solved by the timed level (waiting in the plan), 0 without result, 0 pull-overs (face to face), collisions 0, near misses 0

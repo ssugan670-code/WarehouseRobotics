@@ -1,0 +1,57 @@
+[BOXES] box 1: shelf 4 level 1 centre=[13.22 46.06 0.53] lift=0.00 m
+[BOXES] box 2: shelf 3 level 2 centre=[1.73 43.32 1.43] lift=0.90 m
+[BOXES] box 3: shelf 2 level 3 centre=[-9.78 43.32 2.33] lift=1.80 m
+[STATIONS] Packing Station 1 (table 1): approach from the south side, slot 1 at [18.50 65.97]
+[STATIONS] Packing Station 2 (table 2): approach from the south side, slot 1 at [0.50 65.97]
+[STATIONS] Packing Station 3 (table 3): approach from the south side, slot 1 at [-17.50 65.97]
+[STATIONS] Packing Station 1: 9 places along the table
+[STATIONS] Packing Station 2: 9 places along the table
+[STATIONS] Packing Station 3: 9 places along the table
+[P3CONFIG] 554 slots (540 store, 14 dock), 0 static-stock slots, 54 cartons (30 stored, 10 at dock, 14 reserve)
+[Phase3] Created C:\WarehouseRobotics\src\Phase3\WarehouseFleetSim.slx with 6 robots, 54 cartons
+
+[P3] 6 robot(s): blue, red, green, black, pink, yellow.  Simulation starting - wait for the 3-D window.
+
+[P3] CHOOSE THE MODE (type in this window):
+       p3 mode auto       the system works by itself (emergency job:  p3 urgent <slot> [station n])
+       p3 mode manual     you give the jobs, they run at once in parallel   (p3 wms = where is which box)
+       p3 mode batch      test single robots: jobs per robot, start with  p3 go
+       p3 help            short command table
+       outputs: C:\WarehouseRobotics\data\Phase3\out
+
+p3 mode manual
+[P3] AUTO mode off
+[P3] MODE MANUAL: you give every job, it starts at once, several jobs run in parallel in this one window.
+     p3 wms                              all boxes and where they are
+     p3 move 8B-L3-P06 station 1         box (slot or C<id>) -> packing station, any free robot
+     p3 move D03 1A-L1-P02               box on a stand -> shelf slot
+     p3 red retrieve 3A-L2-P04 station 1 the same for one named robot
+p3 yellow putaway C32 5B-L1-P01
+[P3] yellow: put away C32 into 5B-L1-P01
+p3 yellow stop
+[P3] yellow: STOP (holds position; "p3 yellow resume" releases)
+p3 pink retrieve 3A-L1-P08 station 1
+[P3] pink: retrieve C21 from 3A-L1-P08
+p3 green retrieve 1B-L2-P03 station 2
+[P3] green: retrieve C13 from 1B-L2-P03
+p3 stop
+[P3] stopping the simulation
+[P3] metrics written:
+     C:\WarehouseRobotics\data\Phase3\out\Metrics\Metrics_20261027_055101.csv
+     C:\WarehouseRobotics\data\Phase3\out\Tasks\Tasks_20261027_055101.csv
+     C:\WarehouseRobotics\data\Phase3\out\Events\Events_20261027_055101.csv
+     C:\WarehouseRobotics\data\Phase3\out\Summary\Summary_20261027_055101.txt
+Phase 3 run summary (20261027_055101)
+robots 6, simulated time 250 s
+tasks done 2 (putaway 0, retrieve 2, cross-dock 0), failed 0
+throughput 0.48 tasks/min, shipped cartons 0
+mean task cycle (created->done) 118.4 s, mean queue wait 5.1 s
+EFFICIENCY: throughput 28.8 tasks/h (4.80 per robot and hour), mean robot utilisation 35 % (min 0 %, max 100 %), time held back by other robots 0.0 % of the working time, distance 226 m (112.8 m per task)
+ENERGY (simulated motion + datasheet: 36 W arm, 8.2 kg arm, 4 kg carton; assumed: 35 kg base, 30 W base electronics): total 15.0 Wh = driving 1.1 + lifting 0.05 + arm 1.4 + base 12.5 Wh;  7.51 Wh per task, 0.067 Wh per metre driven
+            retrieve: 2 done, mean service time (assigned->done) 113.2 s, mean queue wait 5.1 s
+            faults handled 0 (tasks affected), watchdog interventions 0, tasks given up 0
+            SUITABILITY: the robots are only 35 % busy on average - for this workload fewer robots would do the job (less congestion, same throughput).
+min robot-robot distance (centres minus carried-box / arm reach) 2.19 m, near misses (<1.17 m) 0, collisions (<0.90 m = chassis circles / boxes / arms touch) 0, wait cycles 0, replans 0
+zone queue: robots waited for a free shelf face / station place 0 s in total (0.0 % of the working time) - they stood still at a safe distance, empty-handed, and went as soon as a place was free; 0 waiting points used
+camera verification: pass 3, fail 0, unavailable 0
+multi-robot planning (M*): 40 searches, 3 coupled, 3 solved by the timed level (waiting in the plan), 0 without result, 0 pull-overs (face to face), collisions 0, near misses 0

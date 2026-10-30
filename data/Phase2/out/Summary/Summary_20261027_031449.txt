@@ -1,0 +1,15 @@
+Phase 2 run summary (20261027_031449)
+robots 1, simulated time 531 s
+tasks done 4 (putaway 2, retrieve 2, cross-dock 0), failed 0
+throughput 0.45 tasks/min, shipped cartons 0
+mean task cycle (created->done) 176.2 s, mean queue wait 75.8 s
+EFFICIENCY: throughput 27.1 tasks/h (27.12 per robot and hour), mean robot utilisation 91 % (min 91 %, max 91 %), time held back by other robots 0.0 % of the working time, distance 282 m (70.6 m per task)
+ENERGY (simulated motion + datasheet: 36 W arm, 8.2 kg arm, 4 kg carton; assumed: 35 kg base, 30 W base electronics): total 8.1 Wh = driving 1.5 + lifting 0.05 + arm 2.2 + base 4.4 Wh;  2.02 Wh per task, 0.029 Wh per metre driven
+            putaway: 2 done, mean service time (assigned->done) 84.1 s, mean queue wait 53.5 s
+            retrieve: 2 done, mean service time (assigned->done) 116.8 s, mean queue wait 98.1 s
+            faults handled 1 (tasks affected), watchdog interventions 0, tasks given up 0
+            SUITABILITY: the robots are busy 91 % of the time - the fleet is the bottleneck, more robots (or more packing / staging capacity) would raise the throughput.
+min robot-robot distance (centres minus carried-box / arm reach) Inf m, near misses (<1.17 m) 0, collisions (<0.90 m = chassis circles / boxes / arms touch) 0, wait cycles 0, replans 0
+zone queue: robots waited for a free shelf face / station place 0 s in total (0.0 % of the working time) - they stood still at a safe distance, empty-handed, and went as soon as a place was free; 0 waiting points used
+camera verification: pass 4, fail 0, unavailable 0
+multi-robot planning (M*): 0 searches, 0 coupled, 0 solved by the timed level (waiting in the plan), 0 without result, 0 pull-overs (face to face), collisions 0, near misses 0

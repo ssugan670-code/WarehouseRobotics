@@ -1,0 +1,7 @@
+task,type,carton,robot,status,created_s,assigned_s,done_s,queue_wait_s,cycle_s,note
+1,retrieve,C27,blue,DONE,9.0,9.1,130.1,0.1,121.1,
+2,retrieve,C16,red,DONE,9.0,19.2,141.1,10.2,132.1,
+3,retrieve,C4,green,DONE,9.0,29.3,224.4,20.3,215.4,
+4,retrieve,C41,yellow,DONE,9.0,59.3,290.5,50.3,281.5,
+5,retrieve,C42,pink,DONE,9.0,49.3,264.8,40.3,255.8,
+6,retrieve,C43,black,DONE,9.0,39.3,346.4,30.3,337.4,

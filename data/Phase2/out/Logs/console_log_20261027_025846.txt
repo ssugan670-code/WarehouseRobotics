@@ -1,0 +1,41 @@
+[BOXES] box 1: shelf 4 level 1 centre=[13.22 46.06 0.53] lift=0.00 m
+[BOXES] box 2: shelf 3 level 2 centre=[1.73 43.32 1.43] lift=0.90 m
+[BOXES] box 3: shelf 2 level 3 centre=[-9.78 43.32 2.33] lift=1.80 m
+[STATIONS] Packing Station 1 (table 1): approach from the south side, slot 1 at [18.50 65.97]
+[STATIONS] Packing Station 2 (table 2): approach from the south side, slot 1 at [0.50 65.97]
+[STATIONS] Packing Station 3 (table 3): approach from the south side, slot 1 at [-17.50 65.97]
+[STATIONS] Packing Station 1: 9 places along the table
+[STATIONS] Packing Station 2: 9 places along the table
+[STATIONS] Packing Station 3: 9 places along the table
+[P3CONFIG] 554 slots (540 store, 14 dock), 0 static-stock slots, 54 cartons (30 stored, 10 at dock, 14 reserve)
+[Phase3] Created C:\WarehouseRobotics\src\Phase2\WarehousePhase2Sim.slx with 1 robots, 54 cartons
+
+[P3] 1 robot(s): blue.  Simulation starting - wait for the 3-D window.
+
+[P3] CHOOSE THE MODE (type in this window):
+       p3 mode auto       the system works by itself (emergency job:  p3 urgent <slot> [station n])
+       p3 mode manual     you give the jobs, they run at once in parallel   (p3 wms = where is which box)
+       p3 mode batch      test single robots: jobs per robot, start with  p3 go
+       p3 help            short command table
+       outputs: C:\WarehouseRobotics\data\Phase2\out
+
+p3 mode batch
+[P3] AUTO mode off
+[P3] MODE BATCH: single-robot tests. Give each robot its own jobs, nothing moves until  p3 go.
+     p3 blue retrieve 3A-L2-P04 station 1     p3 red putaway C5 1A-L1-P03     p3 queue (list)     p3 go [robot]
+p3 blue retrieve 4A-L1-P01 station 1
+[P3] blue: retrieve C27 from 4A-L1-P01  (queued - starts with  p3 go)
+p3 blue retrieve 4A-L3-P07 station 2
+[P3] blue: retrieve C4 from 4A-L3-P07  (queued - starts with  p3 go)
+p3 blue putaway C33 5B-L1-P02
+[P3] blue: put away C33 into 5B-L1-P02  (queued - starts with  p3 go)
+p3 queue
+Queued tasks (waiting for  p3 go):
+  task 1   blue      retrieve  C27 -> Packing Station 1
+  task 2   blue      retrieve  C4  -> Packing Station 2
+  task 3   blue      putaway   C33 -> 5B-L1-P02
+p3 go
+[P3] GO: 3 queued task(s) released
+p3 end
+[P3] GO: 0 queued task(s) released
+[P3] END: queued tasks are finished, then all robots go home and park
